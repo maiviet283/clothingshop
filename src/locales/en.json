@@ -1,0 +1,216 @@
+{
+  "brand": {
+    "name": "TORANO",
+    "tagline": "Modern menswear"
+  },
+  "common": {
+    "currency": "₫",
+    "from": "From",
+    "viewAll": "View all",
+    "shopNow": "Shop now",
+    "explore": "Explore",
+    "readMore": "Read more",
+    "loadMore": "Load more",
+    "backHome": "Back to home",
+    "loading": "Loading…",
+    "new": "New",
+    "sale": "Sale",
+    "soldOut": "Sold out",
+    "products": "products",
+    "results": "results"
+  },
+  "nav": {
+    "home": "Home",
+    "shop": "Shop",
+    "newArrivals": "New In",
+    "sale": "Sale",
+    "collections": "Collections",
+    "about": "About",
+    "menu": "Menu",
+    "openMenu": "Open menu",
+    "closeMenu": "Close menu"
+  },
+  "category": {
+    "ao": "Tops",
+    "quan": "Bottoms",
+    "set": "Sets",
+    "phu-kien": "Accessories",
+    "all": "All products"
+  },
+  "categoryDesc": {
+    "ao": "Polos, shirts, tees, sweats and outerwear, meticulously tailored.",
+    "quan": "Trousers, jeans, chinos and shorts with a flattering fit.",
+    "set": "Pre-styled sets for a sharp, modern look.",
+    "phu-kien": "Leather belts and accessories to finish the look."
+  },
+  "subcategory": {
+    "polo": "Polo Shirts",
+    "tshirt": "T-Shirts",
+    "so-mi": "Shirts",
+    "ni-hoodie": "Sweats & Hoodies",
+    "len": "Knitwear",
+    "blazer": "Blazers",
+    "khoac": "Outerwear",
+    "au": "Trousers",
+    "jeans": "Jeans",
+    "khaki": "Chinos",
+    "short": "Shorts",
+    "ni": "Sweatpants",
+    "gio": "Track Pants",
+    "that-lung": "Belts"
+  },
+  "theme": {
+    "toggle": "Toggle light/dark theme",
+    "light": "Light",
+    "dark": "Dark"
+  },
+  "language": {
+    "toggle": "Change language",
+    "vi": "Tiếng Việt",
+    "en": "English"
+  },
+  "search": {
+    "label": "Search products",
+    "placeholder": "Search polos, jeans…",
+    "open": "Open search",
+    "close": "Close search",
+    "submit": "Search",
+    "title": "Search results",
+    "resultsFor": "Results for",
+    "countOne": "Found {{count}} product",
+    "countOther": "Found {{count}} products",
+    "empty": "Type a keyword to start searching.",
+    "noResults": "No products found",
+    "noResultsHint": "Try a different keyword or browse the full store."
+  },
+  "home": {
+    "heroEyebrow": "Spring / Summer 2026 Collection",
+    "heroTitle": "Define the modern gentleman",
+    "heroSubtitle": "Refined silhouettes, premium fabrics and an impeccable fit, made for the man who values the details.",
+    "heroCta": "Shop the collection",
+    "heroCtaAlt": "See what's new",
+    "featuredEyebrow": "Curated",
+    "featuredTitle": "Featured pieces",
+    "featuredSubtitle": "The most-loved designs of the season.",
+    "newEyebrow": "Just landed",
+    "newTitle": "New arrivals",
+    "categoriesEyebrow": "Shop by category",
+    "categoriesTitle": "Build your wardrobe",
+    "saleEyebrow": "Limited time",
+    "saleTitle": "Up to 70% off",
+    "saleSubtitle": "Own the pieces you love at a special price.",
+    "saleCta": "Shop the sale",
+    "storyEyebrow": "Our story",
+    "storyTitle": "Crafted with intention",
+    "storyBody": "TORANO is made for the man who cares about the details. Every stitch and every fabric is chosen to deliver lasting comfort and timeless elegance."
+  },
+  "values": {
+    "shippingTitle": "Free shipping",
+    "shippingDesc": "On orders over 500K, nationwide.",
+    "returnsTitle": "7-day returns",
+    "returnsDesc": "Easy, hassle-free exchanges.",
+    "authenticTitle": "100% authentic",
+    "authenticDesc": "Quality guaranteed on every piece.",
+    "supportTitle": "Dedicated support",
+    "supportDesc": "Our team is here for you every day."
+  },
+  "collection": {
+    "filters": "Filters",
+    "sortLabel": "Sort",
+    "showing": "Showing {{shown}} of {{total}} {{unit}}",
+    "clear": "Clear filters",
+    "apply": "Apply",
+    "priceRange": "Price range",
+    "availability": "Availability",
+    "inStock": "In stock",
+    "onSale": "On sale",
+    "empty": "No products match these filters.",
+    "emptyHint": "Try broadening your filter criteria."
+  },
+  "sort": {
+    "featured": "Featured",
+    "price-asc": "Price: Low to high",
+    "price-desc": "Price: High to low",
+    "newest": "Newest",
+    "discount": "Biggest discount"
+  },
+  "product": {
+    "size": "Size",
+    "color": "Colour",
+    "selectSize": "Select size",
+    "selectColor": "Select colour",
+    "addToCart": "Add to cart",
+    "buyNow": "Buy now",
+    "added": "Added to cart",
+    "inStock": "In stock",
+    "outOfStock": "Out of stock",
+    "sku": "SKU",
+    "vendor": "Brand",
+    "description": "Description",
+    "details": "Details",
+    "save": "Save {{percent}}%",
+    "related": "You may also like",
+    "gallery": "Product image gallery",
+    "thumbnail": "Image {{index}}",
+    "guide": "Size guide"
+  },
+  "cart": {
+    "title": "Cart",
+    "open": "Open cart",
+    "empty": "Your cart is empty",
+    "emptyHint": "Browse the collection and add your favourites.",
+    "subtotal": "Subtotal",
+    "checkout": "Checkout",
+    "remove": "Remove",
+    "quantity": "Quantity",
+    "continue": "Continue shopping"
+  },
+  "footer": {
+    "newsletterTitle": "Join the list",
+    "newsletterDesc": "Be first to hear about new collections and private offers.",
+    "emailPlaceholder": "Your email address",
+    "subscribe": "Subscribe",
+    "subscribed": "Thanks for subscribing!",
+    "invalidEmail": "Please enter a valid email.",
+    "shopCol": "Shop",
+    "helpCol": "Help",
+    "aboutCol": "About",
+    "followCol": "Follow",
+    "links": {
+      "newArrivals": "New arrivals",
+      "bestSellers": "Best sellers",
+      "sale": "Sale",
+      "sizeGuide": "Size guide",
+      "shipping": "Shipping & delivery",
+      "returns": "Returns & refunds",
+      "faq": "FAQ",
+      "contact": "Contact us",
+      "story": "Our story",
+      "stores": "Store locator",
+      "careers": "Careers",
+      "privacy": "Privacy policy"
+    },
+    "rights": "All rights reserved.",
+    "madeWith": "A frontend showcase project; catalogue data sourced from torano.vn."
+  },
+  "notFound": {
+    "code": "404",
+    "title": "Page not found",
+    "message": "The page you're looking for may have moved or no longer exists.",
+    "cta": "Back to home",
+    "shopCta": "Go to shop"
+  },
+  "breadcrumb": {
+    "home": "Home",
+    "shop": "Shop"
+  },
+  "seo": {
+    "homeTitle": "TORANO — Premium Menswear",
+    "homeDesc": "Discover curated men's polos, shirts, trousers and accessories. Modern style, premium fabrics, an impeccable fit.",
+    "collectionTitle": "{{name}} — TORANO",
+    "collectionDesc": "Shop authentic {{name}} at TORANO. {{count}} products in premium fabrics and modern design.",
+    "productDesc": "{{title}} — {{price}}. Authentic TORANO, free shipping and 7-day returns.",
+    "searchTitle": "Search — TORANO",
+    "notFoundTitle": "Page not found — TORANO"
+  }
+}

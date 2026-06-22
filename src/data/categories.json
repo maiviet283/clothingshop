@@ -1,0 +1,76 @@
+[
+  {
+    "key": "ao",
+    "count": 153,
+    "subs": [
+      {
+        "key": "polo",
+        "count": 68
+      },
+      {
+        "key": "tshirt",
+        "count": 10
+      },
+      {
+        "key": "so-mi",
+        "count": 20
+      },
+      {
+        "key": "ni-hoodie",
+        "count": 9
+      },
+      {
+        "key": "len",
+        "count": 2
+      },
+      {
+        "key": "blazer",
+        "count": 2
+      },
+      {
+        "key": "khoac",
+        "count": 42
+      }
+    ]
+  },
+  {
+    "key": "quan",
+    "count": 57,
+    "subs": [
+      {
+        "key": "au",
+        "count": 14
+      },
+      {
+        "key": "jeans",
+        "count": 8
+      },
+      {
+        "key": "khaki",
+        "count": 9
+      },
+      {
+        "key": "short",
+        "count": 14
+      },
+      {
+        "key": "ni",
+        "count": 4
+      },
+      {
+        "key": "gio",
+        "count": 8
+      }
+    ]
+  },
+  {
+    "key": "phu-kien",
+    "count": 9,
+    "subs": [
+      {
+        "key": "that-lung",
+        "count": 9
+      }
+    ]
+  }
+]

@@ -1,0 +1,152 @@
+.card {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  background: var(--bg);
+}
+
+.media {
+  position: relative;
+  display: block;
+  aspect-ratio: 3 / 4;
+  overflow: hidden;
+  background: var(--surface-2);
+  border: 1px solid var(--line);
+}
+
+.img {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: opacity var(--dur-slow) var(--ease), transform var(--dur-slow) var(--ease);
+}
+
+.imgPrimary {
+  opacity: 1;
+}
+.imgSecondary {
+  opacity: 0;
+  transform: scale(1.04);
+}
+
+.media:hover .imgPrimary {
+  opacity: 0;
+}
+.media:hover .imgSecondary {
+  opacity: 1;
+  transform: scale(1);
+}
+
+.badges {
+  position: absolute;
+  top: var(--space-3);
+  left: var(--space-3);
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-2);
+  z-index: 2;
+}
+
+.badge {
+  font-size: var(--fs-xs);
+  font-weight: 600;
+  letter-spacing: var(--tracking-wide);
+  text-transform: uppercase;
+  padding: 4px 8px;
+  border-radius: var(--radius);
+  line-height: 1;
+}
+.badgeSale {
+  background: var(--sale);
+  color: #fff;
+}
+.badgeNew {
+  background: var(--ink);
+  color: var(--bg);
+}
+.badgeSoldOut {
+  background: var(--surface);
+  color: var(--muted);
+  border: 1px solid var(--line-strong);
+}
+
+/* Quick-add bar slides up on hover (desktop) */
+.quickAdd {
+  position: absolute;
+  left: var(--space-3);
+  right: var(--space-3);
+  bottom: var(--space-3);
+  transform: translateY(calc(100% + var(--space-4)));
+  opacity: 0;
+  transition: transform var(--dur) var(--ease), opacity var(--dur) var(--ease);
+  z-index: 2;
+}
+.media:hover .quickAdd,
+.media:focus-within .quickAdd {
+  transform: translateY(0);
+  opacity: 1;
+}
+
+.body {
+  padding: var(--space-4) var(--space-1) 0;
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-1);
+}
+
+.type {
+  font-size: var(--fs-xs);
+  letter-spacing: var(--tracking-wide);
+  text-transform: uppercase;
+  color: var(--muted);
+}
+
+.title {
+  font-family: var(--font-sans);
+  font-size: var(--fs-base);
+  font-weight: 500;
+  color: var(--ink);
+  line-height: var(--lh-snug);
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+.priceRow {
+  display: flex;
+  align-items: baseline;
+  gap: var(--space-3);
+  margin-top: var(--space-1);
+}
+
+.price {
+  font-size: var(--fs-md);
+  font-weight: 600;
+  color: var(--ink);
+}
+.priceSale {
+  color: var(--sale);
+}
+.compare {
+  font-size: var(--fs-sm);
+  color: var(--muted);
+  text-decoration: line-through;
+}
+
+@media (hover: none) {
+  /* On touch devices reveal the secondary image only via tap, keep quick-add visible */
+  .quickAdd {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+@media (max-width: 600px) {
+  .quickAdd {
+    display: none;
+  }
+}

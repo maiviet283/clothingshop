@@ -1,0 +1,216 @@
+{
+  "brand": {
+    "name": "TORANO",
+    "tagline": "Phong cách nam giới hiện đại"
+  },
+  "common": {
+    "currency": "₫",
+    "from": "Từ",
+    "viewAll": "Xem tất cả",
+    "shopNow": "Mua ngay",
+    "explore": "Khám phá",
+    "readMore": "Tìm hiểu thêm",
+    "loadMore": "Xem thêm",
+    "backHome": "Về trang chủ",
+    "loading": "Đang tải…",
+    "new": "Mới",
+    "sale": "Giảm giá",
+    "soldOut": "Hết hàng",
+    "products": "sản phẩm",
+    "results": "kết quả"
+  },
+  "nav": {
+    "home": "Trang chủ",
+    "shop": "Cửa hàng",
+    "newArrivals": "Hàng mới",
+    "sale": "Khuyến mãi",
+    "collections": "Bộ sưu tập",
+    "about": "Về chúng tôi",
+    "menu": "Danh mục",
+    "openMenu": "Mở danh mục",
+    "closeMenu": "Đóng danh mục"
+  },
+  "category": {
+    "ao": "Áo",
+    "quan": "Quần",
+    "set": "Set bộ",
+    "phu-kien": "Phụ kiện",
+    "all": "Tất cả sản phẩm"
+  },
+  "categoryDesc": {
+    "ao": "Áo polo, sơ mi, T-shirt, nỉ và áo khoác được may đo tỉ mỉ.",
+    "quan": "Quần âu, jeans, khaki và short với phom dáng tôn dáng.",
+    "set": "Set bộ phối sẵn cho vẻ ngoài chỉn chu, hiện đại.",
+    "phu-kien": "Thắt lưng da và phụ kiện hoàn thiện diện mạo."
+  },
+  "subcategory": {
+    "polo": "Áo Polo",
+    "tshirt": "Áo T-shirt",
+    "so-mi": "Áo Sơ mi",
+    "ni-hoodie": "Áo nỉ & Hoodie",
+    "len": "Áo len",
+    "blazer": "Blazer",
+    "khoac": "Áo khoác",
+    "au": "Quần âu",
+    "jeans": "Quần jeans",
+    "khaki": "Quần khaki",
+    "short": "Quần short",
+    "ni": "Quần nỉ",
+    "gio": "Quần gió",
+    "that-lung": "Thắt lưng"
+  },
+  "theme": {
+    "toggle": "Đổi giao diện sáng/tối",
+    "light": "Sáng",
+    "dark": "Tối"
+  },
+  "language": {
+    "toggle": "Đổi ngôn ngữ",
+    "vi": "Tiếng Việt",
+    "en": "English"
+  },
+  "search": {
+    "label": "Tìm kiếm sản phẩm",
+    "placeholder": "Tìm áo polo, quần jeans…",
+    "open": "Mở tìm kiếm",
+    "close": "Đóng tìm kiếm",
+    "submit": "Tìm",
+    "title": "Kết quả tìm kiếm",
+    "resultsFor": "Kết quả cho",
+    "countOne": "Tìm thấy {{count}} sản phẩm",
+    "countOther": "Tìm thấy {{count}} sản phẩm",
+    "empty": "Nhập từ khoá để bắt đầu tìm kiếm.",
+    "noResults": "Không tìm thấy sản phẩm nào",
+    "noResultsHint": "Thử từ khoá khác hoặc xem toàn bộ cửa hàng."
+  },
+  "home": {
+    "heroEyebrow": "Bộ sưu tập Xuân Hè 2026",
+    "heroTitle": "Định hình phong thái phái mạnh",
+    "heroSubtitle": "Những thiết kế tinh giản, chất liệu cao cấp và phom dáng chuẩn mực dành cho người đàn ông hiện đại.",
+    "heroCta": "Mua bộ sưu tập",
+    "heroCtaAlt": "Xem hàng mới",
+    "featuredEyebrow": "Tuyển chọn",
+    "featuredTitle": "Sản phẩm nổi bật",
+    "featuredSubtitle": "Những thiết kế được yêu thích nhất mùa này.",
+    "newEyebrow": "Vừa lên kệ",
+    "newTitle": "Hàng mới về",
+    "categoriesEyebrow": "Mua theo danh mục",
+    "categoriesTitle": "Tủ đồ của bạn",
+    "saleEyebrow": "Ưu đãi có hạn",
+    "saleTitle": "Giảm đến 70%",
+    "saleSubtitle": "Sở hữu thiết kế yêu thích với mức giá đặc biệt.",
+    "saleCta": "Mua hàng giảm giá",
+    "storyEyebrow": "Câu chuyện thương hiệu",
+    "storyTitle": "Chế tác từ sự chỉn chu",
+    "storyBody": "TORANO ra đời cho người đàn ông coi trọng từng chi tiết. Mỗi đường kim mũi chỉ, mỗi loại vải đều được tuyển chọn để mang lại sự thoải mái bền bỉ và vẻ thanh lịch vượt thời gian."
+  },
+  "values": {
+    "shippingTitle": "Miễn phí vận chuyển",
+    "shippingDesc": "Cho đơn hàng từ 500K trên toàn quốc.",
+    "returnsTitle": "Đổi trả 7 ngày",
+    "returnsDesc": "Đổi trả dễ dàng, không rắc rối.",
+    "authenticTitle": "Chính hãng 100%",
+    "authenticDesc": "Cam kết chất lượng trên từng sản phẩm.",
+    "supportTitle": "Hỗ trợ tận tâm",
+    "supportDesc": "Đội ngũ tư vấn sẵn sàng mỗi ngày."
+  },
+  "collection": {
+    "filters": "Bộ lọc",
+    "sortLabel": "Sắp xếp",
+    "showing": "Hiển thị {{shown}} / {{total}} {{unit}}",
+    "clear": "Xoá bộ lọc",
+    "apply": "Áp dụng",
+    "priceRange": "Khoảng giá",
+    "availability": "Tình trạng",
+    "inStock": "Còn hàng",
+    "onSale": "Đang giảm giá",
+    "empty": "Không có sản phẩm phù hợp bộ lọc.",
+    "emptyHint": "Hãy thử nới rộng tiêu chí lọc."
+  },
+  "sort": {
+    "featured": "Nổi bật",
+    "price-asc": "Giá: Thấp đến cao",
+    "price-desc": "Giá: Cao đến thấp",
+    "newest": "Mới nhất",
+    "discount": "Giảm giá nhiều nhất"
+  },
+  "product": {
+    "size": "Kích cỡ",
+    "color": "Màu sắc",
+    "selectSize": "Chọn kích cỡ",
+    "selectColor": "Chọn màu",
+    "addToCart": "Thêm vào giỏ",
+    "buyNow": "Mua ngay",
+    "added": "Đã thêm vào giỏ",
+    "inStock": "Còn hàng",
+    "outOfStock": "Tạm hết hàng",
+    "sku": "Mã SP",
+    "vendor": "Thương hiệu",
+    "description": "Mô tả sản phẩm",
+    "details": "Chi tiết",
+    "save": "Tiết kiệm {{percent}}%",
+    "related": "Có thể bạn thích",
+    "gallery": "Thư viện ảnh sản phẩm",
+    "thumbnail": "Ảnh {{index}}",
+    "guide": "Hướng dẫn chọn size"
+  },
+  "cart": {
+    "title": "Giỏ hàng",
+    "open": "Mở giỏ hàng",
+    "empty": "Giỏ hàng của bạn đang trống",
+    "emptyHint": "Khám phá bộ sưu tập và thêm sản phẩm yêu thích.",
+    "subtotal": "Tạm tính",
+    "checkout": "Thanh toán",
+    "remove": "Xoá",
+    "quantity": "Số lượng",
+    "continue": "Tiếp tục mua sắm"
+  },
+  "footer": {
+    "newsletterTitle": "Đăng ký nhận tin",
+    "newsletterDesc": "Nhận thông tin bộ sưu tập mới và ưu đãi riêng.",
+    "emailPlaceholder": "Địa chỉ email của bạn",
+    "subscribe": "Đăng ký",
+    "subscribed": "Cảm ơn bạn đã đăng ký!",
+    "invalidEmail": "Vui lòng nhập email hợp lệ.",
+    "shopCol": "Mua sắm",
+    "helpCol": "Hỗ trợ",
+    "aboutCol": "Thông tin",
+    "followCol": "Kết nối",
+    "links": {
+      "newArrivals": "Hàng mới",
+      "bestSellers": "Bán chạy",
+      "sale": "Khuyến mãi",
+      "sizeGuide": "Hướng dẫn chọn size",
+      "shipping": "Vận chuyển & giao hàng",
+      "returns": "Đổi trả & hoàn tiền",
+      "faq": "Câu hỏi thường gặp",
+      "contact": "Liên hệ",
+      "story": "Câu chuyện thương hiệu",
+      "stores": "Hệ thống cửa hàng",
+      "careers": "Tuyển dụng",
+      "privacy": "Chính sách bảo mật"
+    },
+    "rights": "Bảo lưu mọi quyền.",
+    "madeWith": "Một dự án trình diễn frontend, dữ liệu lấy từ torano.vn."
+  },
+  "notFound": {
+    "code": "404",
+    "title": "Không tìm thấy trang",
+    "message": "Trang bạn tìm có thể đã bị di chuyển hoặc không còn tồn tại.",
+    "cta": "Về trang chủ",
+    "shopCta": "Đến cửa hàng"
+  },
+  "breadcrumb": {
+    "home": "Trang chủ",
+    "shop": "Cửa hàng"
+  },
+  "seo": {
+    "homeTitle": "TORANO — Thời trang nam cao cấp",
+    "homeDesc": "Khám phá áo polo, sơ mi, quần âu và phụ kiện nam được tuyển chọn. Phong cách hiện đại, chất liệu cao cấp, phom dáng chuẩn mực.",
+    "collectionTitle": "{{name}} — TORANO",
+    "collectionDesc": "Mua {{name}} chính hãng tại TORANO. {{count}} sản phẩm với chất liệu cao cấp và thiết kế hiện đại.",
+    "productDesc": "{{title}} — {{price}}. Chính hãng TORANO, miễn phí vận chuyển và đổi trả 7 ngày.",
+    "searchTitle": "Tìm kiếm — TORANO",
+    "notFoundTitle": "Không tìm thấy trang — TORANO"
+  }
+}
