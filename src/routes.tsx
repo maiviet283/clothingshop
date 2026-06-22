@@ -54,6 +54,13 @@ export const routes: RouteRecord[] = [
         lazy: async () => ({ Component: (await import('./pages/Search')).default }),
       },
       {
+        // Pre-rendered to dist/404.html so static hosts (Cloudflare Pages)
+        // serve a real 404 page for unknown URLs.
+        path: '404',
+        lazy: async () => ({ Component: (await import('./pages/NotFound')).default }),
+      },
+      {
+        // Client-side catch-all for runtime navigation to unknown routes.
         path: '*',
         lazy: async () => ({ Component: (await import('./pages/NotFound')).default }),
       },

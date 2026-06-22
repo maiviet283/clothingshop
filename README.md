@@ -45,6 +45,42 @@ curl -s http://localhost:4173/product/quan-jeans-basic-slim-eabj012 | grep -i '<
 npm run scrape    # refresh src/data/products.json + categories.json
 ```
 
+## Deploy — Cloudflare Pages (auto-deploy on push)
+
+This repo is wired for Cloudflare Pages **Git integration**: connect it once,
+then every `git push` triggers an automatic build + deploy. No secrets, no CI
+files needed — `wrangler.toml` already declares the output dir.
+
+**One-time setup in the Cloudflare dashboard:**
+
+1. Push this repo to GitHub (or GitLab).
+2. Cloudflare dashboard → **Workers & Pages** → **Create** → **Pages** →
+   **Connect to Git** → pick this repository.
+3. In the build settings, enter:
+   - **Framework preset:** `None` (it's a custom Vite SSG build)
+   - **Build command:** `npm run build`
+   - **Build output directory:** `dist`
+   - **Root directory:** `/` (leave default)
+4. (Node version) Cloudflare reads [`.node-version`](.node-version) = `20`
+   automatically. If needed, also add an env var `NODE_VERSION = 20`.
+5. **Save and Deploy.**
+
+From then on: push to the production branch → Cloudflare builds & publishes;
+push to any other branch / open a PR → you get a **preview deployment** URL.
+
+What's already configured for you:
+- [`wrangler.toml`](wrangler.toml) — sets `pages_build_output_dir = "dist"`.
+- [`.node-version`](.node-version) — pins the build to Node 20.
+- [`public/_headers`](public/_headers) — long-cache hashed assets, no-cache HTML,
+  basic security headers.
+- `dist/404.html` — a real pre-rendered 404 page Cloudflare serves for unknown
+  URLs (with `noindex`).
+- `dist/sitemap.xml` + `public/robots.txt`.
+
+> Update the production origin in [`src/lib/site.ts`](src/lib/site.ts) and
+> `public/robots.txt` to your real Pages domain so canonical/OG URLs and the
+> sitemap point at the right host.
+
 ## Project conventions
 
 See [CLAUDE.md](CLAUDE.md) for the architecture and the four mandatory rules

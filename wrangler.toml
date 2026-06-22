@@ -1,0 +1,7 @@
+# Cloudflare Pages configuration.
+# When you connect this repo in Cloudflare → Workers & Pages, the dashboard
+# reads `pages_build_output_dir` from here, so the build output directory is
+# already set for you. (Build command stays `npm run build`.)
+name = "torano"
+compatibility_date = "2025-06-22"
+pages_build_output_dir = "dist"
