@@ -8,16 +8,6 @@
   transition: background-color var(--dur) var(--ease), border-color var(--dur) var(--ease);
 }
 
-.announce {
-  background: var(--ink);
-  color: var(--bg);
-  text-align: center;
-  font-size: var(--fs-xs);
-  letter-spacing: var(--tracking-wide);
-  text-transform: uppercase;
-  padding: var(--space-2) var(--space-4);
-}
-
 .bar {
   display: flex;
   align-items: center;

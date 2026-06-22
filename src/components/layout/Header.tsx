@@ -47,8 +47,6 @@ export function Header({ onOpenSearch }: HeaderProps) {
   return (
     <>
     <header className={styles.header}>
-      <div className={styles.announce}>{t('home.saleEyebrow')} — {t('home.saleTitle')}</div>
-
       <div className="container">
         <div className={styles.bar}>
           <div className={styles.left}>
