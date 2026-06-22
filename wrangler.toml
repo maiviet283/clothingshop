@@ -1,7 +1,16 @@
-# Cloudflare Pages configuration.
-# When you connect this repo in Cloudflare → Workers & Pages, the dashboard
-# reads `pages_build_output_dir` from here, so the build output directory is
-# already set for you. (Build command stays `npm run build`.)
-name = "torano"
+# Cloudflare Workers (Static Assets) configuration.
+#
+# This deploys the pre-rendered SSG output in dist/ as a static-asset Worker.
+# Used by the "Workers Builds" Git integration:
+#   - Build command:  npm run build
+#   - Deploy command: npx wrangler deploy
+#
+# `name` must match your Worker's name in the Cloudflare dashboard.
+name = "clothingshop"
 compatibility_date = "2025-06-22"
-pages_build_output_dir = "dist"
+
+[assets]
+directory = "./dist"
+# Serve the pre-rendered dist/404.html (with a 404 status) for unknown URLs,
+# instead of falling back to index.html. Keeps SEO 404s correct.
+not_found_handling = "404-page"
