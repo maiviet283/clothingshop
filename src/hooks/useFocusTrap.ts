@@ -3,13 +3,7 @@ import { useEffect, useRef } from 'react';
 const FOCUSABLE =
   'a[href], button:not([disabled]), input:not([disabled]), select:not([disabled]), textarea:not([disabled]), [tabindex]:not([tabindex="-1"])';
 
-/**
- * Traps keyboard focus inside the returned ref's element while it is mounted,
- * and restores focus to the previously-focused element on unmount.
- *
- * Intended for modal surfaces (drawers, overlays) that are conditionally
- * rendered — mount = active, unmount = release. SSR-safe (no-ops on the server).
- */
+/* Traps Tab focus inside the ref element while mounted; restores focus on unmount. */
 export function useFocusTrap<T extends HTMLElement = HTMLDivElement>() {
   const ref = useRef<T>(null);
 

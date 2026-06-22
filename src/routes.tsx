@@ -11,11 +11,7 @@ const subcategoryPaths = categories.flatMap((c) =>
 const productPaths = allProductHandles.map((h) => `product/${h}`);
 const collectionPaths = CURATED_SLUGS.map((s) => `collection/${s}`);
 
-/**
- * Route tree (react-router data routes extended with SSG `getStaticPaths`).
- * Pages are lazily imported so each route is its own chunk; the SSG build still
- * pre-renders every path returned by getStaticPaths to static HTML.
- */
+/* Route tree: lazy pages + getStaticPaths so the SSG build pre-renders each URL. */
 export const routes: RouteRecord[] = [
   {
     path: '/',

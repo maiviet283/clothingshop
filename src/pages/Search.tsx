@@ -24,7 +24,7 @@ export default function Search() {
   return (
     <>
       <Seo
-        title={query ? `${t('search.resultsFor')} “${query}” — ${t('brand.name')}` : t('seo.searchTitle')}
+        title={query ? `${t('search.resultsFor')} “${query}” - ${t('brand.name')}` : t('seo.searchTitle')}
         description={t('seo.homeDesc')}
         path={query ? `/search?q=${encodeURIComponent(query)}` : '/search'}
         noindex
@@ -48,7 +48,7 @@ export default function Search() {
             <h1 className={styles.title}>{t('search.title')}</h1>
           )}
           {query && (
-            <p className={styles.meta}>{t('search.countOther', { count: results.length })}</p>
+            <p className={styles.meta}>{t('search.count', { count: results.length })}</p>
           )}
 
           <form className={styles.form} onSubmit={onSubmit} role="search">

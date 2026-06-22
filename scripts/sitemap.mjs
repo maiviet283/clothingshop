@@ -1,9 +1,4 @@
-/**
- * Generate dist/sitemap.xml after the SSG build by enumerating every
- * pre-rendered .html file in dist/. Run as a postbuild step.
- *
- *   node scripts/sitemap.mjs
- */
+/* Generates dist/sitemap.xml from the pre-rendered .html files. Postbuild step. */
 import { readdir, writeFile, stat } from 'node:fs/promises';
 import { fileURLToPath } from 'node:url';
 import { dirname, resolve, join, relative } from 'node:path';

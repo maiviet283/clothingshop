@@ -11,7 +11,7 @@
   }
 }
 
-/* ----------------------------------------------------------- GALLERY */
+/* GALLERY */
 .gallery {
   display: grid;
   gap: var(--space-3);
@@ -90,7 +90,7 @@
   padding: 4px 10px;
 }
 
-/* -------------------------------------------------------------- INFO */
+/* INFO */
 .info {
   display: flex;
   flex-direction: column;
@@ -264,7 +264,7 @@
   flex-shrink: 0;
 }
 
-/* ------------------------------------------------------ RELATED */
+/* RELATED */
 .related {
   padding-top: var(--space-8);
   border-top: 1px solid var(--line);

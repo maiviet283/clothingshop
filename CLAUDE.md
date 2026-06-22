@@ -135,9 +135,18 @@ src/
   (SVG `currentColor`, stroke 1.6). **Không** cài thư viện icon. Icon không dùng
   thì xoá.
 - **Chữ mới**: thêm key vào `vi.json` **và** `en.json`. Không bao giờ hard-code.
+  Số lượng dùng plural i18next (`key_one` / `key_other`), không tự nối chuỗi.
+- **Comment**: viết **ngắn gọn**. Tuyệt đối **không** dùng comment kiểu banner
+  gạch ngang/bằng (`/* ---- X ---- */`, `/* ==== X ==== */`) — chỉ `/* X */`.
+  Function/class nên có **một dòng** comment mô tả ngắn; không viết block dài
+  nhiều dòng. Comment để giải thích "tại sao", không mô tả lại code.
+- **Tiêu đề trang & chữ hiển thị**: dùng gạch nối ngắn `-` (vd `Tên - TORANO`),
+  **không** dùng em-dash `—` (nhìn rất "AI").
 - **Edge cases**: handle 404 (param sai → `NotFoundView`), hết hàng, không có
   ảnh, list rỗng, lỗi nhập liệu (vd. email newsletter), `prefers-reduced-motion`.
-- Trước khi commit: `npm run lint` **và** `npm run build` phải xanh.
+- **Không để code/chữ/icon thừa**: xoá ngay key i18n, icon, export không dùng.
+- Trước khi commit: `npm run lint`, `npm run typecheck` **và** `npm run build`
+  phải xanh (CI ở `.github/workflows/ci.yml` cũng chạy 3 lệnh này).
 
 ---
 

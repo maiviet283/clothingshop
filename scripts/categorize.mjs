@@ -1,13 +1,4 @@
-/**
- * Post-processing step: derive a clean, navigable category tree from the messy
- * per-product `type` field, and tag each product with a stable category key.
- *
- * Writes:
- *   - src/data/categories.json   (the menu tree)
- *   - rewrites src/data/products.json adding `category` + `subcategory` keys
- *
- * Run after scrape.mjs:  node scripts/categorize.mjs
- */
+/* Derives the category tree from product types and tags each product. Run after scrape.mjs. */
 import { readFile, writeFile } from 'node:fs/promises';
 import { fileURLToPath } from 'node:url';
 import { dirname, resolve } from 'node:path';
@@ -15,10 +6,7 @@ import { dirname, resolve } from 'node:path';
 const __dirname = dirname(fileURLToPath(import.meta.url));
 const DATA = resolve(__dirname, '../src/data');
 
-/**
- * Ordered rules. First match wins. Each rule maps keywords (found in product
- * type/title/tags, lowercased, accent-insensitive) to a category + subcategory.
- */
+/* Ordered keyword rules (first match wins) mapping product type -> category/subcategory. */
 const RULES = [
   { cat: 'phu-kien', sub: 'that-lung', kw: ['that lung'] },
   // Bottoms (checked before tops; "short"/"quan" prefixes are unambiguous).

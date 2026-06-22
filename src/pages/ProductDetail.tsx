@@ -8,7 +8,7 @@ import { NotFoundView } from './NotFound';
 import { useLanguage } from '../components/providers/LanguageProvider';
 import { useCart } from '../components/providers/CartProvider';
 import { getProduct, getCategory, relatedProducts } from '../lib/catalog';
-import { cdnImage, discountPercent, formatPrice } from '../lib/format';
+import { cdnImage, cdnSrcSet, discountPercent, formatPrice } from '../lib/format';
 import { absoluteUrl } from '../lib/site';
 import { BagIcon, CheckIcon, RefreshIcon, ShieldIcon, TruckIcon } from '../components/ui/Icon';
 import type { Variant } from '../types';
@@ -100,7 +100,7 @@ export default function ProductDetail() {
   return (
     <>
       <Seo
-        title={`${product.title} — ${t('brand.name')}`}
+        title={`${product.title} - ${t('brand.name')}`}
         description={t('seo.productDesc', {
           title: product.title,
           price: formatPrice(product.minPrice, language),
@@ -126,7 +126,7 @@ export default function ProductDetail() {
         />
 
         <div className={styles.layout}>
-          {/* ----------------------------------------------------- GALLERY */}
+          {/* GALLERY */}
           <div className={styles.gallery}>
             <div className={styles.thumbs} role="tablist" aria-label={t('product.gallery')}>
               {product.images.slice(0, 8).map((img, i) => (
@@ -149,6 +149,8 @@ export default function ProductDetail() {
               <img
                 key={activeImage}
                 src={cdnImage(product.images[activeImage] ?? product.image, 1000)}
+                srcSet={cdnSrcSet(product.images[activeImage] ?? product.image, [600, 800, 1000, 1200])}
+                sizes="(min-width: 900px) 45vw, 100vw"
                 alt={product.title}
                 width={800}
                 height={1066}
@@ -158,7 +160,7 @@ export default function ProductDetail() {
             </div>
           </div>
 
-          {/* -------------------------------------------------------- INFO */}
+          {/* INFO */}
           <div className={styles.info}>
             <span className={styles.vendor}>{product.vendor}</span>
             <h1 className={styles.title}>{product.title}</h1>

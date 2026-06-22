@@ -1,7 +1,6 @@
 import type { SVGProps } from 'react';
 
-/* A minimal, hand-picked icon set drawn at 24x24 on a 1.6 stroke grid.
-   Only icons actually used in the UI live here — no icon-library bloat. */
+/* Hand-drawn icon set (24x24, 1.6 stroke). Only icons in use live here. */
 
 type IconProps = SVGProps<SVGSVGElement> & { size?: number };
 

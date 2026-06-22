@@ -4,7 +4,10 @@ import { useState } from 'react';
 import type { Product } from '../../types';
 import { useLanguage } from '../providers/LanguageProvider';
 import { useCart } from '../providers/CartProvider';
-import { cdnImage, discountPercent, formatPrice } from '../../lib/format';
+import { cdnImage, cdnSrcSet, discountPercent, formatPrice } from '../../lib/format';
+
+const CARD_SIZES = '(min-width: 1024px) 25vw, (min-width: 640px) 33vw, 50vw';
+const CARD_WIDTHS = [300, 450, 600, 800];
 import { BagIcon } from '../ui/Icon';
 import styles from './ProductCard.module.css';
 
@@ -58,6 +61,8 @@ export function ProductCard({ product, priority = false }: ProductCardProps) {
 
         <img
           src={cdnImage(product.image, 600)}
+          srcSet={cdnSrcSet(product.image, CARD_WIDTHS)}
+          sizes={CARD_SIZES}
           alt={product.title}
           className={`${styles.img} ${styles.imgPrimary}`}
           loading={priority ? 'eager' : 'lazy'}
@@ -68,6 +73,8 @@ export function ProductCard({ product, priority = false }: ProductCardProps) {
         {secondary && (
           <img
             src={cdnImage(secondary, 600)}
+            srcSet={cdnSrcSet(secondary, CARD_WIDTHS)}
+            sizes={CARD_SIZES}
             alt=""
             aria-hidden="true"
             className={`${styles.img} ${styles.imgSecondary}`}

@@ -11,7 +11,7 @@ import {
   productsInCategory,
   saleProducts,
 } from '../lib/catalog';
-import { cdnImage, formatPrice } from '../lib/format';
+import { cdnImage, cdnSrcSet, formatPrice } from '../lib/format';
 import { SITE } from '../lib/site';
 import {
   ArrowRightIcon,
@@ -67,7 +67,7 @@ export default function Home() {
         jsonLd={jsonLd}
       />
 
-      {/* ---------------------------------------------------------------- HERO */}
+      {/* HERO */}
       <section className={styles.hero}>
         <span className={styles.heroWord} aria-hidden="true">{t('brand.name')}</span>
         <div className={`container ${styles.heroGrid}`}>
@@ -90,6 +90,8 @@ export default function Home() {
               <Link to={`/product/${hero.handle}`} className={styles.heroMedia}>
                 <img
                   src={cdnImage(hero.image, 900)}
+                  srcSet={cdnSrcSet(hero.image, [600, 900, 1200])}
+                  sizes="(min-width: 900px) 45vw, 100vw"
                   alt={hero.title}
                   width={720}
                   height={900}
@@ -109,7 +111,7 @@ export default function Home() {
         </div>
       </section>
 
-      {/* --------------------------------------------------------- VALUE BAR */}
+      {/* VALUE BAR */}
       <section className={styles.values} aria-label={t('home.featuredTitle')}>
         <div className="container" style={{ paddingInline: 0 }}>
           <div className={styles.valuesGrid}>
@@ -126,7 +128,7 @@ export default function Home() {
         </div>
       </section>
 
-      {/* ---------------------------------------------------------- FEATURED */}
+      {/* FEATURED */}
       <section className={`container ${styles.section}`}>
         <div className={styles.sectionHead}>
           <div>
@@ -141,7 +143,7 @@ export default function Home() {
         <ProductGrid products={featured} priorityCount={4} />
       </section>
 
-      {/* -------------------------------------------------------- CATEGORIES */}
+      {/* CATEGORIES */}
       <section className={`container ${styles.section}`}>
         <div className={styles.sectionHead}>
           <div>
@@ -173,7 +175,7 @@ export default function Home() {
         </div>
       </section>
 
-      {/* ------------------------------------------------------- SALE BANNER */}
+      {/* SALE BANNER */}
       {saleProducts().length > 0 && (
         <section className={styles.sale}>
           <div className={`container ${styles.saleInner}`}>
@@ -189,7 +191,7 @@ export default function Home() {
         </section>
       )}
 
-      {/* -------------------------------------------------------- NEW ARRIVALS */}
+      {/* NEW ARRIVALS */}
       <section className={`container ${styles.section}`}>
         <div className={styles.sectionHead}>
           <div>
@@ -203,7 +205,7 @@ export default function Home() {
         <ProductGrid products={fresh} priorityCount={0} />
       </section>
 
-      {/* -------------------------------------------------------------- STORY */}
+      {/* STORY */}
       <section className="container">
         <div className={styles.story}>
           <Reveal className={styles.storyMedia}>

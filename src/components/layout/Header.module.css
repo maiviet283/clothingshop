@@ -31,7 +31,7 @@
   color: var(--ink);
 }
 
-/* ---- Primary nav (desktop) ------------------------------------------- */
+/* Primary nav (desktop) */
 .nav {
   display: none;
 }
@@ -76,7 +76,7 @@
   color: var(--sale);
 }
 
-/* ---- Mega menu ------------------------------------------------------- */
+/* Mega menu */
 .mega {
   position: absolute;
   top: 100%;
@@ -131,7 +131,7 @@
   color: var(--muted);
 }
 
-/* ---- Icon buttons ---------------------------------------------------- */
+/* Icon buttons */
 .iconBtn {
   display: inline-flex;
   align-items: center;
@@ -184,8 +184,7 @@
   }
 }
 
-/* Theme + language toggles live in the top bar on desktop, and move into the
-   mobile drawer on small screens to keep the header from overflowing. */
+/* Desktop-only: theme/lang toggles move into the drawer on mobile */
 .desktopAction {
   display: none;
 }
@@ -195,7 +194,7 @@
   }
 }
 
-/* ---- Mobile drawer --------------------------------------------------- */
+/* Mobile drawer */
 .overlay {
   position: fixed;
   inset: 0;

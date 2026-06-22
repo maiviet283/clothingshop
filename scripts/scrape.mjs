@@ -1,13 +1,4 @@
-/**
- * One-off scraper for torano.vn (Haravan storefront).
- *
- * Pulls public catalog JSON, normalizes it into a small, typed-friendly shape
- * and writes it to src/data/*.json so the app can be fully static / SSG.
- *
- * Run with:  node scripts/scrape.mjs
- *
- * This is intentionally dependency-free (uses global fetch from Node >= 18).
- */
+/* Scraper for torano.vn: pulls public catalog JSON -> src/data/products.json. Run: node scripts/scrape.mjs */
 import { writeFile, mkdir } from 'node:fs/promises';
 import { fileURLToPath } from 'node:url';
 import { dirname, resolve } from 'node:path';

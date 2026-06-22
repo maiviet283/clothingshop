@@ -5,11 +5,7 @@ interface LogoProps {
   size?: number;
 }
 
-/**
- * TORANO brand mark — an angular faceted "T" monogram inside a sharp shield.
- * Uses `currentColor` for the linework and the brass accent token for the bar,
- * so it adapts to light/dark themes automatically.
- */
+/* TORANO mark: faceted "T" monogram in a shield; adapts to theme via currentColor. */
 export function Logo({ withText = true, className, size = 34 }: LogoProps) {
   return (
     <span

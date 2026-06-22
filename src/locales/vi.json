@@ -65,10 +65,11 @@
     "submit": "Tìm",
     "title": "Kết quả tìm kiếm",
     "resultsFor": "Kết quả cho",
-    "countOther": "Tìm thấy {{count}} sản phẩm",
     "empty": "Nhập từ khoá để bắt đầu tìm kiếm.",
     "noResults": "Không tìm thấy sản phẩm nào",
-    "noResultsHint": "Thử từ khoá khác hoặc xem toàn bộ cửa hàng."
+    "noResultsHint": "Thử từ khoá khác hoặc xem toàn bộ cửa hàng.",
+    "count_one": "Tìm thấy {{count}} sản phẩm",
+    "count_other": "Tìm thấy {{count}} sản phẩm"
   },
   "home": {
     "heroEyebrow": "Bộ sưu tập Xuân Hè 2026",
@@ -180,12 +181,12 @@
     "home": "Trang chủ"
   },
   "seo": {
-    "homeTitle": "TORANO — Thời trang nam cao cấp",
+    "homeTitle": "TORANO - Thời trang nam cao cấp",
     "homeDesc": "Khám phá áo polo, sơ mi, quần âu và phụ kiện nam được tuyển chọn. Phong cách hiện đại, chất liệu cao cấp, phom dáng chuẩn mực.",
-    "collectionTitle": "{{name}} — TORANO",
+    "collectionTitle": "{{name}} - TORANO",
     "collectionDesc": "Mua {{name}} chính hãng tại TORANO. {{count}} sản phẩm với chất liệu cao cấp và thiết kế hiện đại.",
     "productDesc": "{{title}} — {{price}}. Chính hãng TORANO, miễn phí vận chuyển và đổi trả 7 ngày.",
-    "searchTitle": "Tìm kiếm — TORANO",
-    "notFoundTitle": "Không tìm thấy trang — TORANO"
+    "searchTitle": "Tìm kiếm - TORANO",
+    "notFoundTitle": "Không tìm thấy trang - TORANO"
   }
 }

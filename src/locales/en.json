@@ -65,10 +65,11 @@
     "submit": "Search",
     "title": "Search results",
     "resultsFor": "Results for",
-    "countOther": "Found {{count}} products",
     "empty": "Type a keyword to start searching.",
     "noResults": "No products found",
-    "noResultsHint": "Try a different keyword or browse the full store."
+    "noResultsHint": "Try a different keyword or browse the full store.",
+    "count_one": "Found {{count}} product",
+    "count_other": "Found {{count}} products"
   },
   "home": {
     "heroEyebrow": "Spring / Summer 2026 Collection",
@@ -180,12 +181,12 @@
     "home": "Home"
   },
   "seo": {
-    "homeTitle": "TORANO — Premium Menswear",
+    "homeTitle": "TORANO - Premium Menswear",
     "homeDesc": "Discover curated men's polos, shirts, trousers and accessories. Modern style, premium fabrics, an impeccable fit.",
-    "collectionTitle": "{{name}} — TORANO",
+    "collectionTitle": "{{name}} - TORANO",
     "collectionDesc": "Shop authentic {{name}} at TORANO. {{count}} products in premium fabrics and modern design.",
     "productDesc": "{{title}} — {{price}}. Authentic TORANO, free shipping and 7-day returns.",
-    "searchTitle": "Search — TORANO",
-    "notFoundTitle": "Page not found — TORANO"
+    "searchTitle": "Search - TORANO",
+    "notFoundTitle": "Page not found - TORANO"
   }
 }

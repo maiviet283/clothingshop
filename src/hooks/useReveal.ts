@@ -1,19 +1,10 @@
 import { useEffect, useLayoutEffect, useRef, useState } from 'react';
 
-// useLayoutEffect on the client, useEffect on the server (SSG) to avoid the
-// "useLayoutEffect does nothing on the server" warning during pre-render.
+// useLayoutEffect on client, useEffect on server to avoid the SSG warning.
 const useIsomorphicLayoutEffect =
   typeof window !== 'undefined' ? useLayoutEffect : useEffect;
 
-/**
- * Reveal-on-scroll. Adds `is-visible` once the element enters the viewport.
- *
- * Robustness:
- *  - Elements already in the viewport at mount are revealed *before paint*
- *    (no flash of invisible above-the-fold content).
- *  - If IntersectionObserver is unavailable, content is shown immediately.
- *  - A <noscript> rule in index.html shows all `.reveal` content when JS is off.
- */
+/* Reveal-on-scroll: adds `is-visible` when the element enters the viewport. */
 export function useReveal<T extends HTMLElement = HTMLDivElement>(
   options: IntersectionObserverInit = { threshold: 0.12, rootMargin: '0px 0px -8% 0px' },
 ) {

@@ -1,5 +1,4 @@
-/* Domain types for the catalogue. These mirror the normalized JSON produced by
-   scripts/scrape.mjs + scripts/categorize.mjs. */
+/* Domain types mirroring the normalized JSON in src/data. */
 
 export interface Variant {
   id: string;

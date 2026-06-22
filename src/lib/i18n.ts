@@ -8,11 +8,7 @@ export const LANGUAGES: Language[] = ['vi', 'en'];
 export const DEFAULT_LANGUAGE: Language = 'vi';
 const STORAGE_KEY = 'torano-lang';
 
-/**
- * Resolve the initial language. On the server (SSG) and the very first client
- * paint we use the default so the pre-rendered HTML is deterministic and
- * crawler-friendly; the client then upgrades from localStorage after mount.
- */
+/* Resolve initial language: SSG default first, then upgrade from localStorage on the client. */
 export function getInitialLanguage(): Language {
   // Default is always Vietnamese on first visit; only a previously stored
   // choice changes it. (We intentionally do NOT auto-detect navigator.language

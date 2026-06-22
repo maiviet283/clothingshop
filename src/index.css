@@ -1,26 +1,16 @@
-/* =========================================================================
-   TORANO — Global design system & theme tokens
-   -------------------------------------------------------------------------
-   Single source of truth for colour, type, spacing, motion and elevation.
-   Components consume ONLY these CSS custom properties via var(--token);
-   never hard-code a colour or a raw hex value in a component stylesheet.
+/* Global design tokens. Single source of colour/type/spacing/motion; theme via [data-theme]. */
 
-   Theme is switched with  <html data-theme="light|dark">.
-   The aesthetic: sharp-edged, editorial menswear — warm ink, bone paper
-   and a single muted-brass accent. Quiet luxury, not loud.
-   ========================================================================= */
-
-/* ---- Fonts (self-contained Google Fonts import) ------------------------- */
+/* Fonts */
 @import url('https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600&family=Inter:wght@400;500;600;700&display=swap');
 
 :root {
-  /* ---- Brand scale (theme-independent raw values) ----------------------- */
+  /* Brand scale (theme-independent raw values) */
   --brass-300: #d8bd93;
   --brass-400: #c7a36c;
   --brass-500: #b08d57; /* primary accent */
   --brass-600: #95743f;
 
-  /* ---- Type families ---------------------------------------------------- */
+  /* Type families */
   --font-display: 'Fraunces', 'Times New Roman', serif;
   --font-sans: 'Inter', system-ui, -apple-system, 'Segoe UI', sans-serif;
 
@@ -40,7 +30,7 @@
   --tracking-wide: 0.12em;
   --tracking-wider: 0.2em;
 
-  /* ---- Spacing scale ---------------------------------------------------- */
+  /* Spacing scale */
   --space-1: 0.25rem;
   --space-2: 0.5rem;
   --space-3: 0.75rem;
@@ -52,28 +42,28 @@
   --space-9: 6rem;
   --space-10: 8rem;
 
-  /* ---- Layout ----------------------------------------------------------- */
+  /* Layout */
   --container: 1320px;
   --container-narrow: 880px;
   --header-h: 72px;
   --radius: 2px; /* deliberately sharp */
   --radius-pill: 999px;
 
-  /* ---- Motion ----------------------------------------------------------- */
+  /* Motion */
   --ease: cubic-bezier(0.22, 1, 0.36, 1);
   --ease-out: cubic-bezier(0.16, 1, 0.3, 1);
   --dur-fast: 160ms;
   --dur: 280ms;
   --dur-slow: 600ms;
 
-  /* ---- Elevation -------------------------------------------------------- */
+  /* Elevation */
   --z-header: 100;
   --z-overlay: 200;
   --z-drawer: 300;
   --z-toast: 400;
 }
 
-/* ============================ LIGHT THEME ================================ */
+/* LIGHT THEME */
 :root,
 [data-theme='light'] {
   color-scheme: light;
@@ -107,7 +97,7 @@
   --skeleton: linear-gradient(100deg, var(--surface-2) 30%, var(--bg-elevated) 50%, var(--surface-2) 70%);
 }
 
-/* ============================= DARK THEME =============================== */
+/* DARK THEME */
 [data-theme='dark'] {
   color-scheme: dark;
 
@@ -118,8 +108,7 @@
   --ink: #f3eee4;
   --ink-soft: #cabfae;
   --muted: #978a76;
-  /* Borders are lifted well above the dark surfaces so image frames and
-     dividers stay clearly visible (the old values blended into the bg). */
+  /* Lifted above dark surfaces so image borders stay visible */
   --line: #3d382e;
   --line-strong: #574e3a;
 
@@ -142,7 +131,7 @@
   --skeleton: linear-gradient(100deg, var(--surface-2) 30%, var(--surface) 50%, var(--surface-2) 70%);
 }
 
-/* =============================== RESET ================================== */
+/* RESET */
 *,
 *::before,
 *::after {
@@ -184,10 +173,7 @@ body {
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  /* NOTE: no transition on background-color/color here. Transitioning a
-     property whose value is a bare var() that changes on theme switch hits a
-     Chromium bug where the value gets "stuck" on the old theme. The page
-     background must switch instantly and reliably, so we leave it untransitioned. */
+  /* No bg/color transition: var()-based transitions stick on theme switch (Chromium bug) */
 }
 
 img,
@@ -244,7 +230,7 @@ h4 {
   color: var(--on-accent);
 }
 
-/* ---- Scrollbar -------------------------------------------------------- */
+/* Scrollbar */
 ::-webkit-scrollbar {
   width: 10px;
   height: 10px;
@@ -261,7 +247,7 @@ h4 {
   background: var(--muted);
 }
 
-/* ========================= SHARED PRIMITIVES =========================== */
+/* SHARED PRIMITIVES */
 .container {
   width: 100%;
   max-width: var(--container);
@@ -312,7 +298,7 @@ h4 {
   top: var(--space-4);
 }
 
-/* ---- Buttons ---------------------------------------------------------- */
+/* Buttons */
 .btn {
   display: inline-flex;
   align-items: center;
@@ -367,7 +353,7 @@ h4 {
   cursor: not-allowed;
 }
 
-/* ---- Animated underline link ----------------------------------------- */
+/* Animated underline link */
 .link-underline {
   position: relative;
   display: inline-block;
@@ -389,7 +375,7 @@ h4 {
   transform-origin: left;
 }
 
-/* ---- Skeleton loading ------------------------------------------------- */
+/* Skeleton loading */
 .skeleton {
   background: var(--surface-2);
   background-image: var(--skeleton);
@@ -397,7 +383,7 @@ h4 {
   animation: shimmer 1.4s infinite linear;
 }
 
-/* =============================== MOTION ================================= */
+/* MOTION */
 @keyframes shimmer {
   to {
     background-position: -200% 0;

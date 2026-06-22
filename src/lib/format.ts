@@ -24,3 +24,9 @@ export function cdnImage(url: string, width: number): string {
   // hstatic supports _<w>x<h> style suffixes; swap our baked-in _1024x1024.
   return url.replace(/_(\d+)x(\d*)\./, `_${width}x.`);
 }
+
+/** Responsive srcset string from the CDN resizer. */
+export function cdnSrcSet(url: string, widths: number[]): string {
+  if (!url) return '';
+  return widths.map((w) => `${cdnImage(url, w)} ${w}w`).join(', ');
+}

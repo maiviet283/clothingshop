@@ -75,7 +75,7 @@ export function SearchOverlay({ onClose }: SearchOverlayProps) {
               </div>
             ) : (
               <>
-                <p className={styles.meta}>{t('search.countOther', { count: results.length })}</p>
+                <p className={styles.meta}>{t('search.count', { count: results.length })}</p>
                 <div className={styles.grid}>
                   {results.slice(0, MAX_PREVIEW).map((product) => (
                     <ProductCard key={product.handle} product={product} />

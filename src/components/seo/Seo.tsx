@@ -22,11 +22,7 @@ interface SeoProps {
   noindex?: boolean;
 }
 
-/**
- * Centralised document head. Renders on the server during SSG so the markup is
- * crawlable on first byte (title, meta description, OG/Twitter, canonical and
- * JSON-LD are all present in the static HTML).
- */
+/* Per-route document head (title, meta, OG/Twitter, canonical, JSON-LD), rendered at SSG time. */
 export function Seo({
   title,
   description,

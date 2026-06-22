@@ -154,9 +154,7 @@ export function Header({ onOpenSearch }: HeaderProps) {
       </div>
 
     </header>
-    {/* Rendered outside <header> on purpose: the header's backdrop-filter
-        establishes a containing block, which would otherwise break the
-        fixed-position drawer's full-height layout. */}
+    {/* Outside <header>: its backdrop-filter would break the fixed drawer layout */}
     {drawerOpen && (
       <MobileDrawer
         onClose={() => setDrawerOpen(false)}

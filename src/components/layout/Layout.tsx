@@ -32,10 +32,7 @@ function Shell() {
   );
 }
 
-/**
- * Root layout element for every route. Providers live here so the entire tree
- * (including the SSG render) shares theme, language and cart state.
- */
+/* Root layout: wraps every route in the theme/language/cart providers. */
 export function Layout() {
   return (
     <ThemeProvider>

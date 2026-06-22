@@ -29,10 +29,7 @@ export function LanguageProvider({ children }: { children: ReactNode }) {
   const i18n = useMemo(() => setupI18n(DEFAULT_LANGUAGE), []);
   const [language, setLanguageState] = useState<Language>(DEFAULT_LANGUAGE);
 
-  // After mount, upgrade from the SSR default to the user's stored / detected
-  // preference. This is deliberately a post-mount setState: rendering the
-  // default first keeps the hydrated markup identical to the pre-rendered HTML,
-  // then we upgrade — the documented hydration-safe enhancement pattern.
+  // After mount, upgrade from the SSR default to the stored preference.
   useEffect(() => {
     const preferred = getInitialLanguage();
     if (preferred !== language) {

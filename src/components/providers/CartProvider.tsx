@@ -39,9 +39,7 @@ export function CartProvider({ children }: { children: ReactNode }) {
   const [items, setItems] = useState<CartItem[]>([]);
   const [isOpen, setIsOpen] = useState(false);
 
-  // Hydrate from storage on mount only. This is a deliberate post-mount
-  // setState: rendering an empty cart first keeps the hydrated markup identical
-  // to the SSG output, then we upgrade from localStorage.
+  // Hydrate from storage after mount (keeps SSG markup deterministic).
   useEffect(() => {
     try {
       const raw = window.localStorage.getItem(STORAGE_KEY);
