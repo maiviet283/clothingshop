@@ -1,31 +1,19 @@
 {
   "brand": {
-    "name": "TORANO",
-    "tagline": "Modern menswear"
+    "name": "TORANO"
   },
   "common": {
-    "currency": "₫",
     "from": "From",
     "viewAll": "View all",
     "shopNow": "Shop now",
     "explore": "Explore",
-    "readMore": "Read more",
     "loadMore": "Load more",
-    "backHome": "Back to home",
-    "loading": "Loading…",
-    "new": "New",
-    "sale": "Sale",
     "soldOut": "Sold out",
-    "products": "products",
-    "results": "results"
+    "products": "products"
   },
   "nav": {
-    "home": "Home",
-    "shop": "Shop",
     "newArrivals": "New In",
     "sale": "Sale",
-    "collections": "Collections",
-    "about": "About",
     "menu": "Menu",
     "openMenu": "Open menu",
     "closeMenu": "Close menu"
@@ -77,7 +65,6 @@
     "submit": "Search",
     "title": "Search results",
     "resultsFor": "Results for",
-    "countOne": "Found {{count}} product",
     "countOther": "Found {{count}} products",
     "empty": "Type a keyword to start searching.",
     "noResults": "No products found",
@@ -115,13 +102,8 @@
     "supportDesc": "Our team is here for you every day."
   },
   "collection": {
-    "filters": "Filters",
     "sortLabel": "Sort",
     "showing": "Showing {{shown}} of {{total}} {{unit}}",
-    "clear": "Clear filters",
-    "apply": "Apply",
-    "priceRange": "Price range",
-    "availability": "Availability",
     "inStock": "In stock",
     "onSale": "On sale",
     "empty": "No products match these filters.",
@@ -135,24 +117,18 @@
     "discount": "Biggest discount"
   },
   "product": {
-    "size": "Size",
-    "color": "Colour",
     "selectSize": "Select size",
-    "selectColor": "Select colour",
     "addToCart": "Add to cart",
-    "buyNow": "Buy now",
     "added": "Added to cart",
     "inStock": "In stock",
     "outOfStock": "Out of stock",
     "sku": "SKU",
     "vendor": "Brand",
     "description": "Description",
-    "details": "Details",
     "save": "Save {{percent}}%",
     "related": "You may also like",
     "gallery": "Product image gallery",
-    "thumbnail": "Image {{index}}",
-    "guide": "Size guide"
+    "thumbnail": "Image {{index}}"
   },
   "cart": {
     "title": "Cart",
@@ -201,8 +177,7 @@
     "shopCta": "Go to shop"
   },
   "breadcrumb": {
-    "home": "Home",
-    "shop": "Shop"
+    "home": "Home"
   },
   "seo": {
     "homeTitle": "TORANO — Premium Menswear",

@@ -1,31 +1,19 @@
 {
   "brand": {
-    "name": "TORANO",
-    "tagline": "Phong cách nam giới hiện đại"
+    "name": "TORANO"
   },
   "common": {
-    "currency": "₫",
     "from": "Từ",
     "viewAll": "Xem tất cả",
     "shopNow": "Mua ngay",
     "explore": "Khám phá",
-    "readMore": "Tìm hiểu thêm",
     "loadMore": "Xem thêm",
-    "backHome": "Về trang chủ",
-    "loading": "Đang tải…",
-    "new": "Mới",
-    "sale": "Giảm giá",
     "soldOut": "Hết hàng",
-    "products": "sản phẩm",
-    "results": "kết quả"
+    "products": "sản phẩm"
   },
   "nav": {
-    "home": "Trang chủ",
-    "shop": "Cửa hàng",
     "newArrivals": "Hàng mới",
     "sale": "Khuyến mãi",
-    "collections": "Bộ sưu tập",
-    "about": "Về chúng tôi",
     "menu": "Danh mục",
     "openMenu": "Mở danh mục",
     "closeMenu": "Đóng danh mục"
@@ -77,7 +65,6 @@
     "submit": "Tìm",
     "title": "Kết quả tìm kiếm",
     "resultsFor": "Kết quả cho",
-    "countOne": "Tìm thấy {{count}} sản phẩm",
     "countOther": "Tìm thấy {{count}} sản phẩm",
     "empty": "Nhập từ khoá để bắt đầu tìm kiếm.",
     "noResults": "Không tìm thấy sản phẩm nào",
@@ -115,13 +102,8 @@
     "supportDesc": "Đội ngũ tư vấn sẵn sàng mỗi ngày."
   },
   "collection": {
-    "filters": "Bộ lọc",
     "sortLabel": "Sắp xếp",
     "showing": "Hiển thị {{shown}} / {{total}} {{unit}}",
-    "clear": "Xoá bộ lọc",
-    "apply": "Áp dụng",
-    "priceRange": "Khoảng giá",
-    "availability": "Tình trạng",
     "inStock": "Còn hàng",
     "onSale": "Đang giảm giá",
     "empty": "Không có sản phẩm phù hợp bộ lọc.",
@@ -135,24 +117,18 @@
     "discount": "Giảm giá nhiều nhất"
   },
   "product": {
-    "size": "Kích cỡ",
-    "color": "Màu sắc",
     "selectSize": "Chọn kích cỡ",
-    "selectColor": "Chọn màu",
     "addToCart": "Thêm vào giỏ",
-    "buyNow": "Mua ngay",
     "added": "Đã thêm vào giỏ",
     "inStock": "Còn hàng",
     "outOfStock": "Tạm hết hàng",
     "sku": "Mã SP",
     "vendor": "Thương hiệu",
     "description": "Mô tả sản phẩm",
-    "details": "Chi tiết",
     "save": "Tiết kiệm {{percent}}%",
     "related": "Có thể bạn thích",
     "gallery": "Thư viện ảnh sản phẩm",
-    "thumbnail": "Ảnh {{index}}",
-    "guide": "Hướng dẫn chọn size"
+    "thumbnail": "Ảnh {{index}}"
   },
   "cart": {
     "title": "Giỏ hàng",
@@ -201,8 +177,7 @@
     "shopCta": "Đến cửa hàng"
   },
   "breadcrumb": {
-    "home": "Trang chủ",
-    "shop": "Cửa hàng"
+    "home": "Trang chủ"
   },
   "seo": {
     "homeTitle": "TORANO — Thời trang nam cao cấp",

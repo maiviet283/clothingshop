@@ -24,7 +24,7 @@
   --font-display: 'Fraunces', 'Times New Roman', serif;
   --font-sans: 'Inter', system-ui, -apple-system, 'Segoe UI', sans-serif;
 
-  /* ---- Type scale (fluid) ---------------------------------------------- */
+  /* Type scale (fluid) */
   --fs-xs: 0.75rem;
   --fs-sm: 0.8125rem;
   --fs-base: 0.9375rem;

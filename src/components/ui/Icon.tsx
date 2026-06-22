@@ -65,12 +65,6 @@ export const ChevronRightIcon = (p: IconProps) => (
   </svg>
 );
 
-export const ChevronLeftIcon = (p: IconProps) => (
-  <svg {...base(p)}>
-    <path d="m15 6-6 6 6 6" />
-  </svg>
-);
-
 export const ChevronDownIcon = (p: IconProps) => (
   <svg {...base(p)}>
     <path d="m6 9 6 6 6-6" />
@@ -134,12 +128,6 @@ export const HeadsetIcon = (p: IconProps) => (
   <svg {...base(p)}>
     <path d="M4 13v-1a8 8 0 0 1 16 0v1" />
     <path d="M4 13h3v5H5a1 1 0 0 1-1-1zM20 13h-3v5h2a1 1 0 0 0 1-1zM20 18a3 3 0 0 1-3 3h-3" />
-  </svg>
-);
-
-export const FilterIcon = (p: IconProps) => (
-  <svg {...base(p)}>
-    <path d="M3 5h18M6 12h12M10 19h4" />
   </svg>
 );
 
