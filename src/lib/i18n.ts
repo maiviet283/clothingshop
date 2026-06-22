@@ -14,12 +14,13 @@ const STORAGE_KEY = 'torano-lang';
  * crawler-friendly; the client then upgrades from localStorage after mount.
  */
 export function getInitialLanguage(): Language {
+  // Default is always Vietnamese on first visit; only a previously stored
+  // choice changes it. (We intentionally do NOT auto-detect navigator.language
+  // so the experience is deterministic and matches the SSG-rendered default.)
   if (typeof window === 'undefined') return DEFAULT_LANGUAGE;
   try {
     const stored = window.localStorage.getItem(STORAGE_KEY) as Language | null;
     if (stored && LANGUAGES.includes(stored)) return stored;
-    const nav = window.navigator.language.slice(0, 2);
-    if (nav === 'en') return 'en';
   } catch {
     /* localStorage unavailable */
   }

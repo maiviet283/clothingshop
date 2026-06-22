@@ -182,7 +182,10 @@ body {
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  transition: background-color var(--dur) var(--ease), color var(--dur) var(--ease);
+  /* NOTE: no transition on background-color/color here. Transitioning a
+     property whose value is a bare var() that changes on theme switch hits a
+     Chromium bug where the value gets "stuck" on the old theme. The page
+     background must switch instantly and reliably, so we leave it untransitioned. */
 }
 
 img,

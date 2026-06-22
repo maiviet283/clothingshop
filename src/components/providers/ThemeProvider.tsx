@@ -27,11 +27,12 @@ function resolveInitialTheme(): ThemeMode {
     try {
       const stored = window.localStorage.getItem(STORAGE_KEY);
       if (stored === 'light' || stored === 'dark') return stored;
-      if (window.matchMedia('(prefers-color-scheme: dark)').matches) return 'dark';
     } catch {
       /* ignore */
     }
   }
+  // Default to light on first visit; the OS dark-mode preference is ignored on
+  // purpose so the brand always opens in its intended light presentation.
   return 'light';
 }
 

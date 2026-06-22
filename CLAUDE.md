@@ -54,9 +54,12 @@ npm run scrape   # Cào lại dữ liệu từ torano.vn -> src/data/*.json
   khai báo trong [`src/index.css`](src/index.css).
 - Component **chỉ** được dùng qua `var(--token)`. **Cấm hard-code mã màu hex**
   trong file `*.module.css` của component.
-- Theme đổi bằng `<html data-theme="light|dark">`. Light là mặc định; dark
-  override token trong khối `[data-theme='dark']`.
+- Theme đổi bằng `<html data-theme="light|dark">`. **Mặc định luôn là light**
+  (bỏ qua `prefers-color-scheme`); chỉ lựa chọn đã lưu trong `localStorage` mới
+  đổi. Dark override token trong khối `[data-theme='dark']`.
 - Chống FOUC: script nhỏ trong `index.html` set `data-theme` trước khi paint.
+- **Không** đặt `transition` cho `background-color`/`color` dùng bare `var()` đổi
+  theo theme (dính bug "kẹt giá trị" của Chromium) — theme phải đổi tức thì.
 - Tông màu: nền giấy bone, mực ấm gần đen, **một** accent đồng thau (brass) —
   phong cách menswear góc cạnh, sang trọng. Bo góc gần như vuông (`--radius: 2px`).
 
@@ -68,8 +71,9 @@ npm run scrape   # Cào lại dữ liệu từ torano.vn -> src/data/*.json
 - **TUYỆT ĐỐI 100% không viết chữ cứng** trong header/footer/body/bất kỳ
   component nào. Mọi chữ hiển thị phải qua `t('namespace.key')`.
 - Thêm chữ mới = thêm key vào **cả hai** file `vi.json` và `en.json`.
-- Mặc định tiếng Việt (`vi`). Sau khi mount, client nâng cấp theo
-  `localStorage` / `navigator.language` (xem `LanguageProvider`).
+- **Mặc định tiếng Việt (`vi`)** ở mọi lần vào đầu tiên. Chỉ lựa chọn đã lưu
+  trong `localStorage` mới đổi (không tự dò `navigator.language` — để khớp với
+  HTML đã pre-render). Xem `LanguageProvider`.
 
 ### 4. SEO — `curl` ra data thật, không phải root rỗng
 

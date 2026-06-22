@@ -22,12 +22,14 @@
 .heroContent {
   position: relative;
   z-index: 2;
-  max-width: 32ch;
+  max-width: 36ch;
 }
 .heroTitle {
-  font-size: var(--fs-3xl);
-  line-height: 0.98;
+  font-size: clamp(2.6rem, 1.4rem + 4.4vw, 4.5rem);
+  line-height: 1.02;
   letter-spacing: -0.02em;
+  text-wrap: balance;
+  max-width: 14ch;
   margin-block: var(--space-4) var(--space-5);
   color: var(--ink);
 }
@@ -51,6 +53,7 @@
   position: relative;
 }
 .heroMedia {
+  display: block;
   position: relative;
   aspect-ratio: 4 / 5;
   border: 1px solid var(--line);
@@ -66,39 +69,49 @@
 .heroMedia:hover img {
   transform: scale(1.05);
 }
-/* Decorative offset frame */
+/* Decorative brass corner bracket peeking behind the bottom-right of the image.
+   A clean L-shape (not a full rectangle) so it never clashes with the tag. */
 .heroFrame {
   position: absolute;
-  inset: 0;
-  border: 1px solid var(--accent);
-  transform: translate(16px, 16px);
+  right: -10px;
+  bottom: -10px;
+  width: 52%;
+  height: 52%;
+  border-right: 2px solid var(--accent);
+  border-bottom: 2px solid var(--accent);
   z-index: -1;
   pointer-events: none;
 }
+/* Price tag — sits on the bottom-left of the image, hugging its content. */
 .heroTag {
   position: absolute;
   bottom: var(--space-4);
   left: var(--space-4);
-  background: var(--bg);
-  border: 1px solid var(--line);
+  right: auto;
+  max-width: calc(100% - 2 * var(--space-4));
+  background: var(--bg-elevated);
+  border-left: 2px solid var(--accent);
+  box-shadow: var(--shadow);
   padding: var(--space-3) var(--space-4);
-  max-width: 60%;
+  overflow: hidden;
+  z-index: 3;
 }
 .heroTagName {
+  display: block;
   font-size: var(--fs-sm);
   font-weight: 500;
   color: var(--ink);
-  display: -webkit-box;
-  -webkit-line-clamp: 1;
-  line-clamp: 1;
-  -webkit-box-orient: vertical;
+  white-space: nowrap;
   overflow: hidden;
+  text-overflow: ellipsis;
 }
 .heroTagPrice {
+  display: block;
   font-size: var(--fs-sm);
   color: var(--accent);
   font-weight: 600;
   margin-top: 2px;
+  white-space: nowrap;
 }
 
 /* Big watermark word */

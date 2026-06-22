@@ -22,11 +22,12 @@
     <script>
       (function () {
         try {
+          // Default to light; only a previously stored choice overrides it.
           var stored = localStorage.getItem('torano-theme');
-          var theme =
-            stored ||
-            (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light');
-          document.documentElement.setAttribute('data-theme', theme);
+          document.documentElement.setAttribute(
+            'data-theme',
+            stored === 'dark' ? 'dark' : 'light'
+          );
         } catch (e) {}
       })();
     </script>
