@@ -1,4 +1,5 @@
-import { useMemo, useState, type ReactNode } from 'react';
+import { useEffect, useMemo, useState, type ReactNode } from 'react';
+import { useSearchParams } from 'react-router-dom';
 import { useTranslation } from 'react-i18next';
 import type { Product, SortKey } from '../../types';
 import { sortProducts } from '../../lib/catalog';
@@ -27,10 +28,34 @@ export function CollectionView({
   subnav,
 }: CollectionViewProps) {
   const { t } = useTranslation();
-  const [sort, setSort] = useState<SortKey>('featured');
-  const [onlySale, setOnlySale] = useState(false);
-  const [onlyStock, setOnlyStock] = useState(false);
+  // Filters/sort live in the URL so a filtered view is shareable and survives
+  // navigating to a product and back. Pagination (load-more) stays local.
+  const [params, setParams] = useSearchParams();
+
+  const sortParam = params.get('sort') as SortKey | null;
+  const sort: SortKey = sortParam && SORT_OPTIONS.includes(sortParam) ? sortParam : 'featured';
+  const onlySale = params.get('sale') === '1';
+  const onlyStock = params.get('stock') === '1';
+
   const [visible, setVisible] = useState(PAGE_SIZE);
+
+  /** Merge a param patch into the URL (replace history, drop empty values). */
+  const patchParams = (patch: Record<string, string | null>) => {
+    const next = new URLSearchParams(params);
+    for (const [key, value] of Object.entries(patch)) {
+      if (value == null || value === '') next.delete(key);
+      else next.set(key, value);
+    }
+    setParams(next, { replace: true });
+    setVisible(PAGE_SIZE);
+  };
+
+  // Reset pagination when the underlying product set changes (e.g. category nav,
+  // where the route component is reused across params and isn't remounted).
+  useEffect(() => {
+    // eslint-disable-next-line react-hooks/set-state-in-effect
+    setVisible(PAGE_SIZE);
+  }, [products]);
 
   const filtered = useMemo(() => {
     let list = products;
@@ -65,10 +90,7 @@ export function CollectionView({
             type="button"
             className={`${styles.chip} ${onlyStock ? styles.chipActive : ''}`}
             aria-pressed={onlyStock}
-            onClick={() => {
-              setOnlyStock((v) => !v);
-              setVisible(PAGE_SIZE);
-            }}
+            onClick={() => patchParams({ stock: onlyStock ? null : '1' })}
           >
             {t('collection.inStock')}
           </button>
@@ -76,10 +98,7 @@ export function CollectionView({
             type="button"
             className={`${styles.chip} ${onlySale ? styles.chipActive : ''}`}
             aria-pressed={onlySale}
-            onClick={() => {
-              setOnlySale((v) => !v);
-              setVisible(PAGE_SIZE);
-            }}
+            onClick={() => patchParams({ sale: onlySale ? null : '1' })}
           >
             {t('collection.onSale')}
           </button>
@@ -92,7 +111,9 @@ export function CollectionView({
               id="sort"
               className={styles.select}
               value={sort}
-              onChange={(e) => setSort(e.target.value as SortKey)}
+              onChange={(e) =>
+                patchParams({ sort: e.target.value === 'featured' ? null : e.target.value })
+              }
             >
               {SORT_OPTIONS.map((opt) => (
                 <option key={opt} value={opt}>

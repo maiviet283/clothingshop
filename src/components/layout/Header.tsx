@@ -5,6 +5,7 @@ import { Logo } from '../brand/Logo';
 import { useTheme } from '../providers/ThemeProvider';
 import { useLanguage } from '../providers/LanguageProvider';
 import { useCart } from '../providers/CartProvider';
+import { useFocusTrap } from '../../hooks/useFocusTrap';
 import { categories } from '../../lib/catalog';
 import {
   BagIcon,
@@ -185,11 +186,21 @@ function MobileDrawer({
   onToggleLanguage,
 }: MobileDrawerProps) {
   const { t } = useTranslation();
+  const trapRef = useFocusTrap<HTMLDivElement>();
+
+  // Close on Escape.
+  useEffect(() => {
+    const onKey = (e: KeyboardEvent) => {
+      if (e.key === 'Escape') onClose();
+    };
+    window.addEventListener('keydown', onKey);
+    return () => window.removeEventListener('keydown', onKey);
+  }, [onClose]);
 
   return (
     <>
       <div className={styles.overlay} onClick={onClose} aria-hidden="true" />
-      <div className={styles.drawer} role="dialog" aria-modal="true" aria-label={t('nav.menu')}>
+      <div ref={trapRef} className={styles.drawer} role="dialog" aria-modal="true" aria-label={t('nav.menu')}>
         <div className={styles.drawerHead}>
           <Logo size={28} />
           <button

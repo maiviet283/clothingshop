@@ -11,6 +11,7 @@
     "build": "tsc -b && vite-react-ssg build && node scripts/sitemap.mjs",
     "preview": "vite preview --outDir dist",
     "lint": "eslint .",
+    "typecheck": "tsc -b",
     "scrape": "node scripts/scrape.mjs && node scripts/categorize.mjs"
   },
   "dependencies": {

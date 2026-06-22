@@ -3,31 +3,38 @@ import { Link } from 'react-router-dom';
 import { useTranslation } from 'react-i18next';
 import { useCart } from '../providers/CartProvider';
 import { useLanguage } from '../providers/LanguageProvider';
+import { useFocusTrap } from '../../hooks/useFocusTrap';
 import { formatPrice, cdnImage } from '../../lib/format';
 import { BagIcon, CloseIcon, MinusIcon, PlusIcon } from '../ui/Icon';
 import styles from './CartDrawer.module.css';
 
 export function CartDrawer() {
+  const { isOpen } = useCart();
+  // Mount the panel only while open so the focus trap activates on open and
+  // restores focus on close.
+  return isOpen ? <CartPanel /> : null;
+}
+
+function CartPanel() {
   const { t } = useTranslation();
   const { language } = useLanguage();
-  const { items, subtotal, isOpen, close, remove, setQuantity } = useCart();
+  const { items, subtotal, close, remove, setQuantity } = useCart();
+  const trapRef = useFocusTrap<HTMLElement>();
 
   // Close on Escape.
   useEffect(() => {
-    if (!isOpen) return;
     const onKey = (e: KeyboardEvent) => {
       if (e.key === 'Escape') close();
     };
     window.addEventListener('keydown', onKey);
     return () => window.removeEventListener('keydown', onKey);
-  }, [isOpen, close]);
-
-  if (!isOpen) return null;
+  }, [close]);
 
   return (
     <>
       <div className={styles.overlay} onClick={close} aria-hidden="true" />
       <aside
+        ref={trapRef}
         className={styles.drawer}
         role="dialog"
         aria-modal="true"

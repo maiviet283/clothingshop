@@ -2,6 +2,12 @@ import { Head } from 'vite-react-ssg';
 import { useLanguage } from '../providers/LanguageProvider';
 import { SITE, absoluteUrl } from '../../lib/site';
 
+export interface BreadcrumbItem {
+  name: string;
+  /** Path-only, e.g. "/category/ao". Omit for the current page. */
+  path?: string;
+}
+
 interface SeoProps {
   title: string;
   description: string;
@@ -9,8 +15,10 @@ interface SeoProps {
   path: string;
   image?: string;
   type?: 'website' | 'product' | 'article';
-  /** Optional JSON-LD structured data object. */
-  jsonLd?: Record<string, unknown>;
+  /** Optional JSON-LD structured data object (or several). */
+  jsonLd?: Record<string, unknown> | Record<string, unknown>[];
+  /** Breadcrumb trail — emitted as BreadcrumbList structured data. */
+  breadcrumbs?: BreadcrumbItem[];
   noindex?: boolean;
 }
 
@@ -26,11 +34,29 @@ export function Seo({
   image,
   type = 'website',
   jsonLd,
+  breadcrumbs,
   noindex = false,
 }: SeoProps) {
   const { language } = useLanguage();
   const canonical = absoluteUrl(path);
   const ogImage = image || absoluteUrl('/og-default.svg');
+
+  // Collect all structured-data blocks into one array of <script> payloads.
+  const blocks: Record<string, unknown>[] = [];
+  if (Array.isArray(jsonLd)) blocks.push(...jsonLd);
+  else if (jsonLd) blocks.push(jsonLd);
+  if (breadcrumbs && breadcrumbs.length > 0) {
+    blocks.push({
+      '@context': 'https://schema.org',
+      '@type': 'BreadcrumbList',
+      itemListElement: breadcrumbs.map((b, i) => ({
+        '@type': 'ListItem',
+        position: i + 1,
+        name: b.name,
+        ...(b.path ? { item: absoluteUrl(b.path) } : {}),
+      })),
+    });
+  }
 
   return (
     <Head>
@@ -59,9 +85,11 @@ export function Seo({
       <meta name="twitter:description" content={description} />
       <meta name="twitter:image" content={ogImage} />
 
-      {jsonLd && (
-        <script type="application/ld+json">{JSON.stringify(jsonLd)}</script>
-      )}
+      {blocks.map((block, i) => (
+        <script key={i} type="application/ld+json">
+          {JSON.stringify(block)}
+        </script>
+      ))}
     </Head>
   );
 }

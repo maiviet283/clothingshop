@@ -62,6 +62,7 @@ export default function Category() {
         path={path}
         type="website"
         jsonLd={jsonLd}
+        breadcrumbs={crumbs.map((c) => ({ name: c.label, path: c.to }))}
       />
       <CollectionView
         title={title}

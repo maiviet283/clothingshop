@@ -2,6 +2,7 @@ import { useEffect, useMemo, useRef, useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { useTranslation } from 'react-i18next';
 import { searchProducts } from '../../lib/catalog';
+import { useFocusTrap } from '../../hooks/useFocusTrap';
 import { ProductCard } from '../product/ProductCard';
 import { CloseIcon, SearchIcon } from '../ui/Icon';
 import styles from './SearchOverlay.module.css';
@@ -18,6 +19,7 @@ export function SearchOverlay({ onClose }: SearchOverlayProps) {
   const navigate = useNavigate();
   const [query, setQuery] = useState('');
   const inputRef = useRef<HTMLInputElement>(null);
+  const trapRef = useFocusTrap<HTMLDivElement>();
 
   const results = useMemo(() => searchProducts(query), [query]);
 
@@ -45,7 +47,7 @@ export function SearchOverlay({ onClose }: SearchOverlayProps) {
   return (
     <>
       <div className={styles.overlay} onClick={onClose} aria-hidden="true" />
-      <div className={styles.panel} role="dialog" aria-modal="true" aria-label={t('search.label')}>
+      <div ref={trapRef} className={styles.panel} role="dialog" aria-modal="true" aria-label={t('search.label')}>
         <div className="container">
           <div className={styles.searchRow}>
             <SearchIcon className={styles.icon} size={22} />

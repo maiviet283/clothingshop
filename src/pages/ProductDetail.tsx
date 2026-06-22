@@ -109,6 +109,11 @@ export default function ProductDetail() {
         image={cdnImage(product.image, 1200)}
         type="product"
         jsonLd={jsonLd}
+        breadcrumbs={[
+          { name: t('breadcrumb.home'), path: '/' },
+          ...(cat ? [{ name: t(`category.${cat.key}`), path: `/category/${cat.key}` }] : []),
+          { name: product.title },
+        ]}
       />
 
       <div className="container">

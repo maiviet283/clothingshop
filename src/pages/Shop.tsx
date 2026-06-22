@@ -14,6 +14,10 @@ export default function Shop() {
         description={t('seo.collectionDesc', { name: title, count: products.length })}
         path="/shop"
         type="website"
+        breadcrumbs={[
+          { name: t('breadcrumb.home'), path: '/' },
+          { name: title },
+        ]}
       />
       <CollectionView
         title={title}

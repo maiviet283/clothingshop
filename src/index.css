@@ -118,8 +118,10 @@
   --ink: #f3eee4;
   --ink-soft: #cabfae;
   --muted: #978a76;
-  --line: #2c2820;
-  --line-strong: #3d372c;
+  /* Borders are lifted well above the dark surfaces so image frames and
+     dividers stay clearly visible (the old values blended into the bg). */
+  --line: #3d382e;
+  --line-strong: #574e3a;
 
   --accent: var(--brass-400);
   --accent-hover: var(--brass-300);

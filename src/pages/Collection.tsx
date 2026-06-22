@@ -31,6 +31,10 @@ export default function Collection() {
           url: `${SITE.url}${path}`,
           numberOfItems: list.length,
         }}
+        breadcrumbs={[
+          { name: t('breadcrumb.home'), path: '/' },
+          { name: title },
+        ]}
       />
       <CollectionView
         title={title}
